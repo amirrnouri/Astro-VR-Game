@@ -29,10 +29,10 @@ public class AstroSpawner : MonoBehaviour
             float randomZ = Random.Range(0f, 360f);
             randomRot = Quaternion.Euler(randomX, randomY, randomZ); 
 
-            transform.position+=new Vector3(Random.Range(-randomBoxSide,+randomBoxSide),
+            Vector3 spawnPos= transform.position+new Vector3(Random.Range(-randomBoxSide,+randomBoxSide),
             Random.Range(-randomBoxSide,+randomBoxSide),
             Random.Range(-randomBoxSide,+randomBoxSide));
-            Instantiate(Astro,transform.position,randomRot);
+            Instantiate(Astro,spawnPos,randomRot);
         }
    }
 }

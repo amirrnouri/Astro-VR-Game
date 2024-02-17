@@ -10,6 +10,8 @@ public class Rotate : MonoBehaviour
 
     public bool randomSpeed=false;
 
+    public float randomRange=5f;
+
 
     void Start()
     {
@@ -21,9 +23,9 @@ public class Rotate : MonoBehaviour
     {
         if (randomSpeed)
         {
-            rotationSpeedX+=Random.Range(-10,10);
-            rotationSpeedY+=Random.Range(-10,10);
-            rotationSpeedZ+=Random.Range(-10,10);
+            rotationSpeedX+=Random.Range(-randomRange,randomRange);
+            rotationSpeedY+=Random.Range(-randomRange,randomRange);
+            rotationSpeedZ+=Random.Range(-randomRange,randomRange);
 
         }
 
