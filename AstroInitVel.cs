@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AstroInitVel : MonoBehaviour
 {
-    public float initVel = 5;
+    public float initVel = 0.03f;
     private Rigidbody rb;
     private GameObject Earth;
     // Start is called before the first frame update

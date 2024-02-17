@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     {
         _gameState.Score = 0;
         _gameState.GameOver = false;
+        _gameState.GameSpeed=1;
     }
 
     private void Update()

@@ -7,7 +7,7 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "GameData", menuName = "ScriptableObjects/CreateGameDataAsset")]
 public class GameState : ScriptableObject
 {
-    public int Score;
+    public float Score;
     public UnityEvent<int> OnIncreaseScore;
     public UnityEvent OnGameOver;
     public float GameSpeed = 1;
@@ -36,9 +36,9 @@ public class GameState : ScriptableObject
     public float PlayerBulletPower=50;
 */
 
-void Start()
+void Awake()
     {
-        // Add variable data to the dictionary
+      GameSpeed = 1;
         
     }
 
@@ -58,16 +58,22 @@ void Start()
                 OnGameOver?.Invoke();
         }
     }
-    public void IncreaseScore(int amount)
+    public void IncreaseScore(float amount)
     {
         Score += amount;
 
-        OnIncreaseScore?.Invoke(Score);
+        //OnIncreaseScore?.Invoke(Score);
     }
 
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void GAMEOVER()
+    {
+        GameSpeed=0;
+        
     }
 
 }
