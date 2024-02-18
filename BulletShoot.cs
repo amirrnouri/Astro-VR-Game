@@ -29,7 +29,7 @@ public class BulletShoot : MonoBehaviour
 
     IEnumerator Shoot()
     {
-        Instantiate(objectToCreat,transform.position,Quaternion.identity);
+        Instantiate(objectToCreat,transform.position,transform.rotation);
         
         yield return new WaitForSeconds(shootDelay);
         canShoot=true;

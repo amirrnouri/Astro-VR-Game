@@ -45,7 +45,14 @@ public class Health : MonoBehaviour
         gameObjectData["BulletMaxHealth"] = 1f;
         gameObjectData["BulletDamagePower"] = 50f;
 
+        gameObjectData["EnemyBulletMaxHealth"] = 1f;
+        gameObjectData["EnemyBulletDamagePower"] = 5;
+        gameObjectData["EnemyBulletScore"] = 0f;
 
+
+        gameObjectData["UFOMaxHealth"] = 50f;
+        gameObjectData["UFODamagePower"] = 50f;
+        gameObjectData["UFOScore"] = 200f;
 
 
 
