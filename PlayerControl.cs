@@ -43,8 +43,8 @@ public class PlayerControl : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X");
 
         float mouseY = Input.GetAxis("Mouse Y");
-        transform.Rotate(-mouseY* rotationSpeed *10* Time.deltaTime/2, mouseX *10* rotationSpeed * Time.deltaTime/2, 0f);
-
+        transform.Rotate(-mouseY* rotationSpeed *10* Time.deltaTime, mouseX *10* rotationSpeed * Time.deltaTime, 0f);
+        
         }
 
         

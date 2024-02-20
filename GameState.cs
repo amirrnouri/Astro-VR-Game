@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.Collections;
+
 
 
 [CreateAssetMenu(fileName = "GameData", menuName = "ScriptableObjects/CreateGameDataAsset")]
@@ -13,28 +15,8 @@ public class GameState : ScriptableObject
     public float GameSpeed = 1;
     [SerializeField] private bool _gameOver;
 
+    public float gameOverDelay=0.5f;
 
-
-/*
-    public float AstroBigMaxHeath=100;
-    public float AstroBigDamagePower=100;
-    public float AstroBigScore=100;
-    
-
-    public float AstroMedMaxHeath=50;
-    public float AstroMedDamagePower=50;
-    public float AstroMedScore=50;
-
-    public float AstroLilMaxHeath=50;
-    public float AstroLilDamagePower=50;
-    public float AstroLilScore=50;    
-
-    public float UFOMaxHeath=50;
-    public float UFOScore=50;
-    public float UFOBulletPower=10;
-
-    public float PlayerBulletPower=50;
-*/
 
 void Awake()
     {
@@ -43,6 +25,10 @@ void Awake()
     }
 
 
+    void Update()
+    {
+      
+    }
 
 
 
@@ -70,10 +56,5 @@ void Awake()
         SceneManager.LoadScene(sceneName);
     }
 
-    public void GAMEOVER()
-    {
-        GameSpeed=0;
-        
-    }
 
 }

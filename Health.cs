@@ -82,8 +82,10 @@ public class Health : MonoBehaviour
 
         if (currentHealth<=0)
         {
+            if ( gameObject.tag!="Earth")
             Destroy(gameObject);
             
+
             OnDestroy?.Invoke();
 
             if (gameObject.tag!="Player" && gameObject.tag!="Bullet" && gameObject.tag!="Earth" && gameObject.tag!="UFOBullet" )
@@ -100,6 +102,13 @@ public class Health : MonoBehaviour
     {
         if (gameObject.tag=="Player" && collider.tag=="Bullet") return;
         if (gameObject.tag=="Bullet" && collider.tag=="Player") return;
+        if (gameObject.tag=="EnemyBullet" && collider.tag=="UFO") return;
+        if (gameObject.tag=="UFO" && collider.tag=="EnemyBullet") return;
+        if (gameObject.tag=="Bullet" && collider.tag=="EnemyBullet") return;
+        if (gameObject.tag=="EnemyBullet" && collider.tag=="Bullet") return;
+
+
+
 
         if (collider.TryGetComponent<Health>(out Health colliderHealth)) 
         {
